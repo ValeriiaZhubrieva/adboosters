@@ -118,6 +118,9 @@ h6 {
   font-weight: inherit;
   font-size: inherit
 }
+body {
+  background-color: var(--white-color)
+}
 .lock body {
   overflow: hidden;
   touch-action: none;
@@ -306,7 +309,7 @@ h6 {
   content: "";
   width: 1rem;
   height: 1rem;
-  margin-top: 2%;
+  margin-top: 3%;
   background: url(../img/icons/star.svg) center/contain no-repeat
 }
 .menu__contacts:not(:last-child) {
@@ -411,12 +414,14 @@ h6 {
   display: grid;
   -webkit-transform: scale(0);
   transform: scale(0);
+  visibility: hidden;
   transition: -webkit-transform .3s;
   transition: transform .3s;
   transition: transform .3s,-webkit-transform .3s
 }
 .popup-show .video-popup__content {
   z-index: 2;
+  visibility: visible;
   -webkit-transform: scale(1);
   transform: scale(1)
 }
@@ -634,22 +639,22 @@ h6 {
   z-index: 25;
   display: flex;
   align-items: center;
-  gap: 3.125rem
+  gap: 1.875rem
 }
-.header__phone {
+.header__link {
   width: 2rem;
   height: 2rem;
   display: grid;
   place-content: center;
   transition: color .3s
 }
-.header__phone svg {
+.header__link svg {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
   object-fit: cover
 }
-.header__phone:hover {
+.header__link:hover {
   color: var(--blue-color)
 }
 .header__menu-overlay {
@@ -680,7 +685,7 @@ h6 {
 .contacts {
   display: flex;
   flex-wrap: wrap;
-  gap: .9375rem 1.875rem
+  gap: 1.875rem
 }
 .contacts__link {
   width: 3.75rem;
@@ -1514,9 +1519,9 @@ h6 {
     padding: 1.875rem 0
   }
   .header__actions {
-    gap: 1.875rem
+    gap: 1.25rem
   }
-  .header__phone {
+  .header__link {
     width: 1.625rem;
     height: 1.625rem
   }
@@ -1675,6 +1680,10 @@ h6 {
   }
   .menu__text {
     display: none
+  }
+  .menu__btns {
+    align-content: stretch;
+    justify-items: center
   }
   .video-popup__content {
     padding: .625rem
