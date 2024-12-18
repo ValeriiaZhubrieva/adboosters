@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20241217232543">
+	<link rel="stylesheet" href="css/style.min.css?_v=20241218132334">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -438,14 +438,13 @@
 									<div class="results__slide swiper-slide results-card">
 										<div class="results-card__video">
 											<div class="results-card__decor">
-												<button type="button" class="results-card__play">
+												<button data-video-src="files/video.mp4" type="button" class="results-card__play video-button">
 													<svg width="20" height="22" viewBox="0 0 20 22" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
 														<path d="M18.5 8.40192C20.5 9.55663 20.5 12.4434 18.5 13.5981L5 21.3923C3 22.547 0.499999 21.1036 0.499999 18.7942L0.5 3.20577C0.5 0.896366 3 -0.547006 5 0.607694L18.5 8.40192Z" />
 													</svg>
 												</button>
 											</div>
 											<img class="results-card__preview" src="img/results/image-1.webp" alt="Image">
-											<video loading="lazy" src="files/Крем-пудра VENZEN Beauty Cream.mp4" controls muted playsinline></video>
 										</div>
 										<div class="results-card__content">
 											<div class="results-card__info">
@@ -503,14 +502,13 @@
 									<div class="results__slide swiper-slide results-card">
 										<div class="results-card__video">
 											<div class="results-card__decor">
-												<button type="button" class="results-card__play">
+												<button data-video-src="files/video.mp4" type="button" class="results-card__play video-button">
 													<svg width="20" height="22" viewBox="0 0 20 22" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
 														<path d="M18.5 8.40192C20.5 9.55663 20.5 12.4434 18.5 13.5981L5 21.3923C3 22.547 0.499999 21.1036 0.499999 18.7942L0.5 3.20577C0.5 0.896366 3 -0.547006 5 0.607694L18.5 8.40192Z" />
 													</svg>
 												</button>
 											</div>
 											<img class="results-card__preview" src="img/results/image-2.webp" alt="Image">
-											<video loading="lazy" src="files/Крем-пудра VENZEN Beauty Cream.mp4" controls muted playsinline></video>
 										</div>
 										<div class="results-card__content">
 											<div class="results-card__info">
@@ -567,14 +565,13 @@
 									<div class="results__slide swiper-slide results-card">
 										<div class="results-card__video">
 											<div class="results-card__decor">
-												<button type="button" class="results-card__play">
+												<button data-video-src="files/video.mp4" type="button" class="results-card__play video-button">
 													<svg width="20" height="22" viewBox="0 0 20 22" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
 														<path d="M18.5 8.40192C20.5 9.55663 20.5 12.4434 18.5 13.5981L5 21.3923C3 22.547 0.499999 21.1036 0.499999 18.7942L0.5 3.20577C0.5 0.896366 3 -0.547006 5 0.607694L18.5 8.40192Z" />
 													</svg>
 												</button>
 											</div>
 											<img class="results-card__preview" src="img/results/image-3.webp" alt="Image">
-											<video loading="lazy" src="files/Крем-пудра VENZEN Beauty Cream.mp4" controls muted playsinline></video>
 										</div>
 										<div class="results-card__content">
 											<div class="results-card__info">
@@ -614,7 +611,7 @@
 															<span>Eduardo Ramirez</span>
 														</a>
 														<div class="results-card__client-company">
-															oowner of “Blue Mist“
+															owner of “Blue Mist“
 														</div>
 													</div>
 												</div>
@@ -1042,7 +1039,20 @@
 			</div>
 		</footer>
 	</div>
-	<script src="js/app.min.js?_v=20241217232543"></script>
+	<!-- Попап -->
+	<div class="video-popup" id="videoPopup" aria-hidden="true">
+		<div class="video-popup__overlay"></div>
+		<div class="video-popup__content">
+			<button class="video-popup__close" aria-label="Close video">
+				<svg width="28" height="26" viewBox="0 0 28 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path d="M4.80762 4.80762L23.1924 23.1924" stroke="#6A6EFF" stroke-width="2" stroke-linecap="round" />
+					<path d="M4.80762 23.1924L23.1924 4.80761" stroke="#6A6EFF" stroke-width="2" stroke-linecap="round" />
+				</svg>
+			</button>
+			<video class="video-popup__video" loading="lazy" src="" controls muted playsinline></video>
+		</div>
+	</div>
+	<script src="js/app.min.js?_v=20241218132334"></script>
 </body>
 
 </html>
